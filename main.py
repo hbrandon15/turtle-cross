@@ -20,6 +20,10 @@ while game_is_on:
     time.sleep(0.1)
     screen.update()
 
+    # detect if the player has reached the finish line
+    if player.finish_line():
+        player.reset_position()
+
 
 
 
