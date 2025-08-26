@@ -11,6 +11,9 @@ screen.tracer(0)
 # create the player
 player = Player()
 
+# create the car
+car = CarManager()
+
 # Keyboard bindings
 screen.listen()
 screen.onkey(player.move, "Up")
@@ -18,6 +21,7 @@ screen.onkey(player.move, "Up")
 game_is_on = True
 while game_is_on:
     time.sleep(0.1)
+    car.move()
     screen.update()
 
     # detect if the player has reached the finish line
