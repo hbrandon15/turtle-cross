@@ -8,10 +8,25 @@ screen = Screen()
 screen.setup(width=600, height=600)
 screen.tracer(0)
 
+# create the player
+player = Player()
+
+# Keyboard bindings
+screen.listen()
+screen.onkey(player.move, "Up")
+
 game_is_on = True
 while game_is_on:
     time.sleep(0.1)
     screen.update()
+
+    # detect if the player has reached the finish line
+    if player.finish_line():
+        player.reset_position()
+
+
+
+
 
 
 # first we need to create a turtle player that starts at the bottom of the screen and listens for the "UP" keyword.
