@@ -34,6 +34,7 @@ while game_is_on:
     for car in car_manager.all_cars:
         if car.distance(player) < 30:
             game_is_on = False
+            scoreboard.game_over()
 
     # detect if the player has reached the finish line
     if player.finish_line():
