@@ -14,6 +14,9 @@ player = Player()
 # create the car
 car_manager = CarManager()
 
+# create the scoreboard
+scoreboard = Scoreboard()
+
 
 # Keyboard bindings
 screen.listen()
